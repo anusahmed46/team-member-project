@@ -1,0 +1,311 @@
+<!DOCTYPE html>;
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+   
+
+
+    <title>MEMBERS PAGE</title>
+</head>
+<body>
+
+
+
+
+
+
+
+<div class="bar" style="background-color: black; ">
+
+  
+
+
+
+
+
+    <nav  class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-top: -2%;" >
+        <div  class="container-fluid">
+      
+          <a class="navbar-brand"  href="#">Team Reporter App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" style="font-family:Arial, Helvetica, sans-serif ; font-weight: bolder; font-size: x-large;" aria-current="page" href="#">Home</a>
+              </li>
+              </li>
+              
+            
+            </ul>
+          </div>
+        </div>
+        <form class="d-flex">
+<button type="submit" style="margin-right: 10px;" id="logout"  class="btn btn-primary">LogOut</button>    </form>
+      </nav>
+    
+
+
+    </div>
+
+
+
+
+<!-- <div class="main-div">
+
+
+<div class="team" style="text-align: center;" >
+<h2>
+  Team You Own 
+</h2>
+
+</div>
+
+
+
+
+<div>
+
+
+  <ul id="list">
+
+
+  </ul>
+
+
+</div> -->
+
+
+<div style="border: 5px solid black; height: 90vh;">
+
+
+
+
+  <div class="main-div">
+
+
+    <div class="team" style="text-align: center;" >
+    <h2>
+      Team You Own 
+    </h2>
+    
+    </div>
+    
+    
+    
+    
+    <div>
+    
+    
+      <ul id="list">
+    
+    
+      </ul>
+    
+    
+    </div>
+    
+
+
+<div class="container" >
+  <div class="row">
+    <div class="col-md-10">
+
+   
+
+
+<div class="pop">
+
+
+
+
+
+    
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  
+  
+  
+  <button class="open-button " style=" border-radius: 90%; width: 5%; margin-bottom: 3%;"  onclick="openForm()">+</button>
+  
+  <div class="form-popup" id="myForm">
+    <form action="member.html" class="form-container">
+      <h1 style="margin-bottom: 3%;">Create a new team</h1>
+  
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Team name</label>
+        <!-- <input type="text" placeholder="User name" class="form-control" id="todo-item" aria-describedby="textHelp"> -->
+        
+        <input type="text" id="todo-item" >
+        <div id="textHelp" class="form-text"></div>
+      </div>
+  
+  
+      <div class="input-group mb-3" style="margin-bottom: 3%;">
+          
+        <select class="form-select" id="" style="margin-bottom: 3%;">
+          <option selected>Select Category</option>
+          <option value="1">Teating Team</option>
+          <option value="2">Developer Team</option>
+          <option value="3">Marketing Team</option>
+        </select>
+      </div>
+  
+  
+  
+      <div class="mb-3" style="margin-bottom: 3%;">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" placeholder="invite members (type gmail)" class="form-control" id="" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text"></div>
+      </div>
+    </form> 
+  <div>
+
+    <button style="margin-top: 2%; width: 10%; border: 1px solid black;" onclick="create()" id="createbtn"  class="btn btn-primary">Create</button>     
+
+    <button style="margin-top:2%; width: 10%; border: 1px solid black;" type="button" id="cancel" class="btn cancel"  onclick="closeForm()">Close</button>
+
+    
+  
+  </div>
+    
+  </div>
+  
+  </div>
+  
+
+<a href="index5.html"><button style="margin-top:2%; width: 30%; border: 1px solid black;"  type="button" id="cancel" class="btn btn-dark"  onclick="closeForm()">go to the next page</button></a>
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+
+
+<div class="plus" style="margin-top:4%" >
+  <button class="open-button" style="border-radius: 90%; width: 5%; margin-right: 4%;" onclick="openForm()">+</button>
+  <button id="dltall" class="open-button btn-primary" style=" border-radius: 10%; " onclick="dltall()">Delete All</button>
+</div>
+
+
+</div>
+
+
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+<script src="app.js"></script>
+    
+</body>
+</html>
+
+
+
+<script >
+  // pop up page functionality
+
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+
+
+
+
+var list = document.getElementById("list")
+
+
+
+function create() {
+  var todo_item = document.getElementById("todo-item");
+  
+  // create li tag with text node
+  
+  var li = document.createElement("li")
+  var litext = document.createTextNode(todo_item.value);
+  li.appendChild(litext);
+
+  // create delete button
+  var delbtn = document.createElement("button");
+  var delText = document.createTextNode("Delete");
+  delbtn.setAttribute("class","delete")
+  delbtn.setAttribute("onclick" ,"del(this) ")
+  delbtn.appendChild(delText);
+
+  // create edit button 
+  var editbtn = document.createElement("button");
+  var editText = document.createTextNode("Edit");
+  editbtn.appendChild(editText);
+  editbtn.setAttribute("class","edit");
+
+  editbtn.setAttribute("onclick","editItem(this)")
+
+
+
+  li.appendChild(delbtn);
+  li.appendChild(editbtn)  
+
+  list.appendChild(li);
+
+
+  todo_item.value = " ";
+
+   console.log(li); 
+}
+
+
+
+// Function of dlt btn
+
+function del(d) {
+
+  d.parentNode.remove()
+}
+
+
+
+// FUNTION OF DLT ALL BUTTON
+
+
+function dltall() {
+  list.innerHTML = " "
+  
+}
+
+// edit function
+
+function editItem(d) {
+ 
+//  var val = d.parentNode.firstChild.nodeValue;
+ 
+  var val = prompt("enter edit value",d.parentNode.firstChild.nodeValue);
+  d.parentNode.firstChild.nodeValue = val; 
+   
+  
+  // console.log(d);
+  
+}
+</script>
+    
+</body>
+</html>
